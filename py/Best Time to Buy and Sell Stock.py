@@ -12,7 +12,7 @@ class Solution:
         
         count = 0;
         
-        while count < len(prices) - 1:
+        while count < len(prices) - 1:  #max sub array
             total += prices[count];
             if total > max:
                 max = total;
