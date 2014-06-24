@@ -1,0 +1,1280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<!-- Powered by Question2Answer - http://www.question2answer.org/ -->
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Leetcode Discuss</title>
+		<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./qa-theme/Leetcode/qa-styles.css?1.6.2">
+		<style><!--
+			.qa-body-js-on .qa-notice {display:none;}
+		//--></style>
+		<link rel="alternate" type="application/rss+xml" href="./feed/qa.rss" title="Recent questions and answers">
+		<link rel="search" type="application/opensearchdescription+xml" title="Leetcode Discuss" href="./opensearch.xml">
+		<script type="text/javascript">
+		var qa_root='.\/';
+		var qa_request='';
+		var qa_oldonload=window.onload;
+		window.onload=function() {
+			if (typeof qa_oldonload=='function')
+				qa_oldonload();
+			
+			qa_reveal(document.getElementById('notice_visitor'), 'notice');
+		};
+		</script>
+		<script src="./qa-content/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script src="./qa-content/qa-page.js?1.6.2" type="text/javascript"></script>
+		<script type="text/javascript">
+			if (typeof qa_wysiwyg_editor_config == 'object')
+				qa_wysiwyg_editor_config.skin='kama';
+		</script>
+		<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+	</head>
+	<body
+		class="qa-template-qa qa-body-js-off"
+		>
+		<script type="text/javascript">
+			var b=document.getElementsByTagName('body')[0];
+			b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
+		</script>
+		
+      <div class="navbar navbar-inverse navbar-extra">
+      <div class="container">
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">LeetCode OJ</a>
+      </div>
+      <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+      <li id="problemsNav"><a href="/problems/">Problems</a></li>
+      <li id="pickNav"><a href="/problems/">Pick One!</a></li>
+      <li id="submissionsNav"><a href="/submissions/">Submissions</a></li>
+      <li id="" class="active"><a href="/discuss">Discuss</a></li>
+      <li id="donateNav"><a href="/donate"><font color="#ed9c28">Donate</font></a></li>
+      </ul>
+					<div class="navbar-form navbar-right">
+        <a class="btn btn-primary" href="/accounts/signup/">Sign up</a>
+        <a class="btn btn-default" href="/accounts/login/?next=/discuss/">Sign in</a>
+        </div>
+		
+      </div><!--/.navbar-collapse -->
+      </div>
+      </div> 
+		<div class="qa-notice" id="notice_visitor">
+			<form method="post" action="./">
+				<center>Welcome to LeetCode Discuss. &nbsp;Please read the <a href="/discuss/faq"><b>FAQ</b></a> to help yourself making the best use of Discuss.</center>
+				<input name="notice_visitor" onclick="return qa_notice_click(this);" type="submit" value="X" class="qa-notice-close-button"> 
+				<input type="hidden" name="code" value="0-1401439347-e84e60bff8dc4e027aae20f790af78d69e626643">
+			</form>
+		</div>
+		<div class="qa-body-wrapper">
+			
+			<div class="qa-header">
+				<div class="qa-header-clear">
+				</div>
+				<form class="qa-search-bar" method="get" action="/discuss/search" _lpchecked="1">
+      <div class="input-group">
+      <input type="text" name="q" value="" class="form-control" placeholder=" Search">
+      <span class="input-group-btn">
+      <button type="submit" class="btn btn-primary">
+        &nbsp;<span class="glyphicon glyphicon-search">
+        </span>&nbsp;</button>
+      </span>
+      </div>
+      </form>
+					<a href="./ask" class="btn btn-success btn-lg qa-ask-btn">
+      Ask a Question
+      </a>
+				</div> <!-- END qa-header -->
+				
+				<div class="qa-main-shadow">
+					
+					<div class="qa-main-wrapper">
+						
+						<div class="qa-nav-main">
+							<ul class="qa-nav-main-list">
+								<li class="qa-nav-main-item qa-nav-main-activity">
+									<a href="./activity" class="qa-nav-main-link">All Activity</a>
+								</li>
+								<li class="qa-nav-main-item qa-nav-main-questions">
+									<a href="./questions" class="qa-nav-main-link">Questions</a>
+								</li>
+								<li class="qa-nav-main-item qa-nav-main-hot">
+									<a href="./hot" class="qa-nav-main-link">Hot!</a>
+								</li>
+								<li class="qa-nav-main-item qa-nav-main-unanswered">
+									<a href="./unanswered" class="qa-nav-main-link">Unanswered</a>
+								</li>
+								<li class="qa-nav-main-item qa-nav-main-tag">
+									<a href="./tags" class="qa-nav-main-link">Tags</a>
+								</li>
+								<li class="qa-nav-main-item qa-nav-main-categories">
+									<a href="./categories" class="qa-nav-main-link">Categories</a>
+								</li>
+								<li class="qa-nav-main-item qa-nav-main-user">
+									<a href="./users" class="qa-nav-main-link">Users</a>
+								</li>
+							</ul>
+							<div class="qa-nav-main-clear">
+							</div>
+						</div>
+						<div class="qa-sidepanel">
+							<div class="qa-sidebar">
+								<p>Welcome to LeetCode Discuss.</p>
+
+<p>This is a place to ask questions related to <i>only</i> <a href="/problems">OJ problems</a>.</p>
+
+<p>Please <a href="/discuss/faq"><b><font color="red">read the FAQ</font></b></a> to help yourself making the best use of Discuss.</p>
+							</div>
+							
+							<div class="qa-nav-cat">
+								<ul class="qa-nav-cat-list qa-nav-cat-list-1">
+									<li class="qa-nav-cat-item qa-nav-cat-all">
+										<a href="./" class="qa-nav-cat-link qa-nav-cat-selected">All categories</a>
+									</li>
+									<li class="qa-nav-cat-item qa-nav-cat-oj">
+										<a href="./oj" class="qa-nav-cat-link">OJ</a>
+										<span class="qa-nav-cat-note">(1,216)</span>
+									</li>
+								</ul>
+								<div class="qa-nav-cat-clear">
+								</div>
+							</div>
+							<div class="qa-widgets-side qa-widgets-side-bottom">
+								<div class="qa-widget-side qa-widget-side-bottom">
+									<h2 style="margin-top:0; padding-top:0;">
+										Most popular tags
+									</h2>
+									<div style="font-size:10px;">
+										<a href="./tag/time-limit-exceeded" style="font-size:24.0px; vertical-align:baseline;">time-limit-exceeded</a>
+										<a href="./tag/wrong-answer" style="font-size:23.7px; vertical-align:baseline;">wrong-answer</a>
+										<a href="./tag/test-case" style="font-size:15.6px; vertical-align:baseline;">test-case</a>
+										<a href="./tag/python" style="font-size:14.0px; vertical-align:baseline;">python</a>
+										<a href="./tag/run-time-error" style="font-size:13.3px; vertical-align:baseline;">run-time-error</a>
+										<a href="./tag/time-complexity" style="font-size:13.3px; vertical-align:baseline;">time-complexity</a>
+										<a href="./tag/testcase-wrong" style="font-size:10.5px; vertical-align:baseline;">testcase-wrong</a>
+										<a href="./tag/java" style="font-size:7.1px; vertical-align:baseline;">java</a>
+										<a href="./tag/improve" style="font-size:6.1px; vertical-align:baseline;">improve</a>
+										<a href="./tag/space-complexity" style="font-size:5.6px; vertical-align:baseline;">space-complexity</a>
+									</div>
+								</div>
+								<div class="qa-widget-side qa-widget-side-bottom">
+									<div class="qa-activity-count">
+										<p class="qa-activity-count-item">
+											<span class="qa-activity-count-data">1,216</span> questions
+										</p>
+										<p class="qa-activity-count-item">
+											<span class="qa-activity-count-data">1,383</span> answers
+										</p>
+										<p class="qa-activity-count-item">
+											<span class="qa-activity-count-data">2,051</span> comments
+										</p>
+										<p class="qa-activity-count-item">
+											<span class="qa-activity-count-data">2,620</span> users
+										</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="qa-main">
+							<h1>
+								Recent questions and answers
+								<a href="./feed/qa.rss" title="Recent questions and answers"><img src="./qa-theme/Leetcode/images/rss.jpg" alt="" width="16" height="16" border="0" class="qa-rss-icon"></a>
+							</h1>
+							<div class="qa-part-q-list">
+								<form method="post" action="./">
+									<div class="qa-q-list">
+										
+										<div class="qa-q-list-item" id="q5710">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5710">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5710_1_q5710" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5710_-1_q5710" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">2</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5710/runtime-error-but-this-code-do-run-on-my-location-computer"><span title="class LRUCache: ca=0 v=dict() first_ele=-1 # @param capacity, an integer def __init__(self, capacity): self.ca=capacity # @return an integer def get(self, key): if self.v.has_key(key): self.v[key][1]=self.v[self.first_ele][1] self.v[key][2]=self.first_ele self.v[self.v[self.first_ele][1]][2]=key self.v[self.first_ele][1]=key  ...  self.v[self.first_ele][1]=self.v[self.v[self.first_ele][1]][1] del self.v[self.v[self.first_ele][1]] lru=LRUCache(1) lru.set(2,1) print lru.get(2)">Runtime error, but this code do run on my location computer</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">36 minutes</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/lru-cache" class="qa-category-link">LRU Cache</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/thelosing" class="qa-user-link">thelosing</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">130</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/run-time-error" class="qa-tag-link">run-time-error</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5545">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5545">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5545_1_q5545" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5545_-1_q5545" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">1</span><span class="qa-a-count-pad"> answer</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">20</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5545/there-anyone-using-solve-problem-about-search-looking-ideas"><span title="I use C++ to implement the BFS to solve this problem. 37 test cases cost 2144ms. I think there may be more efficient algorithms for this. I have tried the A* search, and chosen the h(**word**) as the hamming distance between **word** and **end**, and found that it's even less efficient. I have not tried the trie data structure. Have anyone tried that?">Is there anyone using trie to solve this problem? And what about A* search? Looking for new ideas</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./5545/there-anyone-using-solve-problem-about-search-looking-ideas?show=5708#a5708" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 hour</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/word-ladder" class="qa-category-link">Word Ladder</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/bengol" class="qa-user-link">bengol</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">250</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5707">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5707">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5707_1_q5707" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5707_-1_q5707" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">4</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5707/algorithm-using-binary-search-accepted-some-suggestions-else"><span title="class Solution { public: int search(int A[], int n, int target) { int index=-1; if(n!=0){ int first=0,last=n-1; while(firsttarget){ if(A[mid]&gt;=A[first]){ if(targetA[first]){ last=mid-1; } else{ index=first; break; } } else{ last=mid-1; } } else{ if(A[mid]&gt;=A[last]){ first=mid+1; } else{ if(targetA[last]){ last=mid-1; } else{ index=last; break; } } } } } return index; } };">My algorithm using binary search is accepted.Want some suggestions as it has a lot of if-else.</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">2 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/search-in-rotated-sorted-array" class="qa-category-link">Search in Rotated Sorted Array</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/Bluefeather" class="qa-user-link">Bluefeather</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">230</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/binary-search" class="qa-tag-link">binary-search</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5706">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5706">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5706_1_q5706" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5706_-1_q5706" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">2</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5706/correct-answer-on-xcode-but-wrong-answer-on-oj"><span title="class Solution { private: static bool equal(const Point &amp; a, const Point &amp; b) { return (a.x == b.x &amp;&amp; a.y == b.y); } static double slope(const Point &amp; a, const Point &amp; b) { if (equal(a, b)) return -std::numeric_limits::infinity(); else if (a.x == b.x) return std::numeric_limits::infinity(); else if (a.y == ... &gt; &gt; -42 -230 I ran the codes on ideone.com as well, and the output was also: &gt; 6 Can anyone tell me why is the output on OJ different from the output of my own testing?">Correct Answer on Xcode, but Wrong Answer on OJ</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">2 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/max-points-on-a-line" class="qa-category-link">Max Points on a Line</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/henryvhl" class="qa-user-link">henryvhl</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">120</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/wrong-answer" class="qa-tag-link">wrong-answer</a></li>
+														<li class="qa-q-item-tag-item"><a href="./tag/works-on-my-machine" class="qa-tag-link">works-on-my-machine</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5704">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5704">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5704_1_q5704" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5704_-1_q5704" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">2</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5704/why-am-i-getting-time-limit-exceeded"><span title="Here is my code for this prrblem - if (s == null || s.length() == 0) return 0; HashMap hm = new HashMap(); char[] arr = s.toCharArray(); hm.put(arr[0], 1); int start = 0, i = 1, max = 1; while (i &lt; s.length()){ if (hm.get(arr[i]) == null) { hm.put(arr[i], i); } else ...  giving me the right answers on eclipse. Is it because I am using the clear method of HashMap? Does that take a lot of time? [1]: http://leetcode.com/2011/05/longest-substring-without-repeating-characters.html">Why am I getting time limit exceeded?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">3 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/longest-substring-without-repeating-characters" class="qa-category-link">Longest Substring Without Repeating Characters</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/yashkelkar26" class="qa-user-link">yashkelkar26</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">160</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/time-complexity" class="qa-tag-link">time-complexity</a></li>
+														<li class="qa-q-item-tag-item"><a href="./tag/time-limit-exceeded" class="qa-tag-link">time-limit-exceeded</a></li>
+														<li class="qa-q-item-tag-item"><a href="./tag/hashmap" class="qa-tag-link">hashmap</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q3971">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_3971">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_3971_1_q3971" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_3971_-1_q3971" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">+2</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">1</span><span class="qa-a-count-pad"> answer</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">153</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./3971/in-place-solution-ask-for-suggestion"><span title="I have done non in place insertion. Just want to try in place version because it seems faster and more memory efficient. Would like to ask for suggestion to see whether I can further improve it. Pass OJ already. But not guarantee it's bug free :P vector insert(vector &amp;intervals, Interval newInterval) { //inplace solution for  ... =0,r=(int)intervals.size()-1; Interval&amp; n=newInterval; //binary search for the first interval x, such that x.start is larger than n.start while(l">In place solution, ask for suggestion</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./3971/in-place-solution-ask-for-suggestion?show=5702#a5702" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">6 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/insert-interval" class="qa-category-link">Insert Interval</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/stellari" class="qa-user-link">stellari</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">700</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q1713">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_1713">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_1713_1_q1713" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_1713_-1_q1713" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">3</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">746</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./1713/why-tle-for-this-solution-where-can-i-optimize-it-thanks"><span title="/** * Definition for a point. * class Point { * int x; * int y; * Point() { x = 0; y = 0; } * Point(int a, int b) { x = a; y = b; } * } */ public class Solution { public int maxPoints(Point[] points) { int maxPts = 0; for(int i =0; i">Why TLE for this solution? Where can I optimize it? Thanks!</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./1713/why-tle-for-this-solution-where-can-i-optimize-it-thanks?show=5701#a5701" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">7 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/max-points-on-a-line" class="qa-category-link">Max Points on a Line</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/fun4LeetCode" class="qa-user-link">fun4LeetCode</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">180</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q4057">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_4057">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_4057_1_q4057" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_4057_-1_q4057" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-selected">
+													<span class="qa-a-count-data">3</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">475</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./4057/post-solution-here-luckily-got-accepted-anybody-has-solution"><span title="class Solution { public: int lengthOfLongestSubstring(string s) { unordered_set table; int tmpCnt = 0; int maxCnt = 0; for(int i = 0; i &lt; s.length(); i++){ auto iter = table.find(s[i]); if(iter == table.end()){ tmpCnt++; } else{ table.clear(); tmpCnt = 1; int j = i-1; while(s[j]!=s[i]){ table.emplace( ...  use this variable to update my 'max' value. But I am feeling terrible about this O(n^2) method. It would be great if you guys can give me some inspiration on a O(n) method.">I Post My O(n^2) Solution Here(It luckily got accepted). Anybody has an O(n) solution?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./4057/post-solution-here-luckily-got-accepted-anybody-has-solution?show=5695#a5695" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">17 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/longest-substring-without-repeating-characters" class="qa-category-link">Longest Substring Without Repeating Characters</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/ice4026" class="qa-user-link">ice4026</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">250</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5694">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5694">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5694_1_q5694" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5694_-1_q5694" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">6</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5694/can-anyone-tell-what-construct-last-case-somebody-help-figure"><span title="I've got a WA because of the last case fail to pass. OJ gave me thus tips: Submission Result: Wrong Answer Input: {-1,-1} Output: Random pointer of node with label -1 points to a node from the original list. Expected: {-1,-1} but I cannot figure out where I am wrong. my program is as below: public RandomListNode  ... tail = tail.next; copyTail.next = tail.next; copyTail = copyTail.next; if(copyTail.next == null){ tail.next = null; } } return copyHead; } thanks for you guys">can anyone tell me what the construct of the last case ? or can somebody help me figure out my bug ?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">17 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/copy-list-with-random-pointer" class="qa-category-link">Copy List with Random Pointer</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/huntfor" class="qa-user-link">huntfor</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">120</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/testcase-wrong" class="qa-tag-link">testcase-wrong</a></li>
+														<li class="qa-q-item-tag-item"><a href="./tag/wrong-answer" class="qa-tag-link">wrong-answer</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5692">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5692">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5692_1_q5692" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5692_-1_q5692" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">8</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5692/max-points-on-a-line-why-attributeerror-when-running-on-oj"><span title="The following code can run correctly on the local IDLE (python ver 2.7), but it may encounter AttributeError when running on OJ. Maybe I have used an incorrect method to import the points set, but I am not sure. What is wrong with this code? class Solution: # @param points, a list of Points # @return an integer def maxPoints(self, points): if points == []:  ... 639),(23,79),(-230,-691),(-115,-341), (92,289),(60,336),(-105,-467),(135,701),(-90,-394),(-184,-551),(150,774)])">Max Points on a Line: Why AttributeError when running on OJ</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">19 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/max-points-on-a-line" class="qa-category-link">Max Points on a Line</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/kiddyse" class="qa-user-link">kiddyse</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">170</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/python" class="qa-tag-link">python</a></li>
+														<li class="qa-q-item-tag-item"><a href="./tag/wrong-answer" class="qa-tag-link">wrong-answer</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5691">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5691">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5691_1_q5691" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5691_-1_q5691" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">11</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5691/why-am-i-getting-a-wrong-answer"><span title="I tried solving this question by reversing the number by using bitwise operation say for example if the number' binary representation is 00000110 ,what this does is, send 0000011 into the code and the left shift reverse_num 5 times to get 01100000 which obviously is reverse of original,after that I am doing an &quot;&amp;&quot; with this number to original ... s in the &amp; part. class Solution { public: bool isPalindrome(int x) { if(x&gt;= 1; while(num) { reverse_num = 1; count--; } reverse_num">Why am I getting a wrong answer?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">19 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/palindrome-number" class="qa-category-link">Palindrome Number</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/swapedoc" class="qa-user-link">swapedoc</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">790</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/wrong-answer" class="qa-tag-link">wrong-answer</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item qa-q-closed" id="q5690">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5690">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5690_1_q5690" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5690_-1_q5690" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">+1</span><span class="qa-netvote-count-pad"> vote</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">21</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5690/is-my-solution-good-enough"><span title="public class Solution { public int singleNumber(int[] A) { int sum=0; for(int i=0;i">Is My solution good enough?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">19 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/single-number" class="qa-category-link">Single Number</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/jiharley" class="qa-user-link">jiharley</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">150</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/improve" class="qa-tag-link">improve</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q1523">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_1523">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_1523_1_q1523" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_1523_-1_q1523" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">8</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">1,568</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./1523/who-can-show-me-a-dp-solution-thanks"><span title="This is my solution. But the time complexity isn't good. public boolean wordBreak(String s, Set dict) { if (s == null || dict == null) return false; Iterator iterator = dict.iterator(); while (iterator.hasNext()) { s = cutStr(s, iterator.next()); if (s.isEmpty()) { return true; } } return false; } private String cutStr(String orgStr, String  ... { if (i &lt; index || i &gt; (index + subStr.length() - 1)) { res[j++] = orgStr.charAt(i); } } return new String(res); } return orgStr; }">Who can show me a DP solution. Thanks.</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./1523/who-can-show-me-a-dp-solution-thanks?show=5689#a5689" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">22 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/word-break" class="qa-category-link">Word Break</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/Newbier" class="qa-user-link">Newbier</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">180</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q2727">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_2727">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_2727_1_q2727" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_2727_-1_q2727" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">2</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">358</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./2727/climb-stairs-exceed-time-limits-why"><span title="class Solution { public: int climbStairs(int n) { if (n">Climb stairs exceed time limits, Why?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./2727/climb-stairs-exceed-time-limits-why?show=5688#a5688" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">23 hours</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/climbing-stairs" class="qa-category-link">Climbing Stairs</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/gitzhou" class="qa-user-link">gitzhou</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">180</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/time-limit-exceeded" class="qa-tag-link">time-limit-exceeded</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q3844">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_3844">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_3844_1_q3844" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_3844_-1_q3844" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">+5</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">2</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">733</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./3844/how-to-solve-the-problem-without-recursion"><span title="I solved the problem in Java with recursion, merge sort. But I realized that it don't have a **constant space complexity**. Every time the function is used, constant space is allocated. The function will be used nearly log(n) times, so the space complexity is log(n). Maybe it can only be solved without recursion while it has  ... .) public class Solution { public ListNode sortList(ListNode head) { int len = 0; for( ListNode now=head; now!=null; now=now.next ) ++len; if(len">How to solve the problem without recursion</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./3844/how-to-solve-the-problem-without-recursion?show=5687#a5687" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 day</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/sort-list" class="qa-category-link">Sort List</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/ItBaker" class="qa-user-link">ItBaker</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">170</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/-complexity" class="qa-tag-link">-complexity</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q3972">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_3972">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_3972_1_q3972" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_3972_-1_q3972" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">+9</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count">
+													<span class="qa-a-count-data">2</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">230</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./3972/please-change-the-misleading-description"><span title="It seems not only me misunderstood the question. Please modify the description, since it's frustrating if you are solving a &quot;different&quot; question. Thanks.">Please change the misleading description</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./3972/please-change-the-misleading-description?show=5686#a5686" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 day</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/count-and-say" class="qa-category-link">Count and Say</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/robert4" class="qa-user-link">robert4</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">170</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5684">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5684">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5684_1_q5684" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5684_-1_q5684" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">5</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5684/is-a-string-a-scramble-of-itself"><span title="Is &quot;abcdefg&quot; a scramble of &quot;abcdefg&quot;? Does the existence of one scramble operation neccessary to make it a scramble?">Is a string a scramble of itself?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 day</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/scramble-string" class="qa-category-link">Scramble String</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/lzhao" class="qa-user-link">lzhao</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">180</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q3064">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_3064">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_3064_1_q3064" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_3064_-1_q3064" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">+2</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-selected">
+													<span class="qa-a-count-data">11</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">591</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./3064/in-place-solution"><span title="The simple solution which requires additional space is : class Solution { public: void rotate(vector &amp;matrix) { auto result = matrix; for (int i = 0; i &lt; matrix.size(); i++) { for (int j = 0; j &lt; matrix.size(); j++) { result[j][matrix.size() - i - 1] = matrix[i][j]; } } matrix = result; } }; Does anyone have an in-place solution?">In place solution?</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./3064/in-place-solution?show=5683#a5683" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 day</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/rotate-image" class="qa-category-link">Rotate Image</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/Dreamerpku" class="qa-user-link">Dreamerpku</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">240</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5682">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5682">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5682_1_q5682" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5682_-1_q5682" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-zero">
+													<span class="qa-a-count-data">0</span><span class="qa-a-count-pad"> answers</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">8</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5682/my-none-recursive-solution"><span title="Hello, I've finish this problem without recursion. Any comment on how i can improve on the code? Thanks. Is there a reason why people are doing recursive builds? (Space vs time?) public class Solution { public int minDistance(String word1, String word2) { int [][] result = new int[word1.length()+1][word2.length()+1]; //set up deletion into null string; for(int i=0;i">my none recursive solution</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<span class="qa-q-item-what">asked</span>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 day</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/edit-distance" class="qa-category-link">Edit Distance</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/BioDaddy" class="qa-user-link">BioDaddy</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">120</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+										<div class="qa-q-list-item" id="q5668">
+											<div class="qa-q-item-stats">
+												<div class="qa-voting qa-voting-net" id="voting_5668">
+													<div class="qa-vote-buttons qa-vote-buttons-net">
+														<input title="Click to vote up" name="vote_5668_1_q5668" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+														<input title="Click to vote down" name="vote_5668_-1_q5668" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+													</div>
+													<div class="qa-vote-count qa-vote-count-net">
+														<span class="qa-netvote-count">
+															<span class="qa-netvote-count-data">0</span><span class="qa-netvote-count-pad"> votes</span>
+														</span>
+													</div>
+													<div class="qa-vote-clear">
+													</div>
+												</div>
+												<span class="qa-a-count qa-a-count-selected">
+													<span class="qa-a-count-data">1</span><span class="qa-a-count-pad"> answer</span>
+												</span>
+												<span class="qa-view-count">
+													<span class="qa-view-count-data">31</span><span class="qa-view-count-pad"> views</span>
+												</span>
+											</div>
+											<div class="qa-q-item-main">
+												<div class="qa-q-item-title">
+													<a href="./5668/reverse-words-string-why-python-code-has-unboundlocalerror"><span title="The following code runs successfully in my local Python 2.7 IDLE, but it has an UnboundLocalError ( local variable 'new_string' referenced before assignment) in this interpreter. What happened? What should I do? class Solution: # @param s, a string # @return a string def reverseWords(self, s): word_list = s.split() wordnum = ...  new_string = word_list[wordnum - i - 1] else: new_string = new_string + ' ' + word_list[wordnum - i - 1] self.answer = new_string return self.answer">Reverse Words in a String: Why my Python Code has an UnboundLocalError</span></a>
+												</div>
+												<span class="qa-q-item-avatar-meta">
+													<span class="qa-q-item-meta">
+														<a href="./5668/reverse-words-string-why-python-code-has-unboundlocalerror?show=5680#a5680" class="qa-q-item-what">answered</a>
+														<span class="qa-q-item-when">
+															<span class="qa-q-item-when-data">1 day</span><span class="qa-q-item-when-pad"> ago</span>
+														</span>
+														<span class="qa-q-item-where">
+															<span class="qa-q-item-where-pad">in </span><span class="qa-q-item-where-data"><a href="./oj/reverse-words-in-a-string" class="qa-category-link">Reverse Words in a String</a></span>
+														</span>
+														<span class="qa-q-item-who">
+															<span class="qa-q-item-who-pad">by </span>
+															<span class="qa-q-item-who-data"><a href="./user/timshaffer" class="qa-user-link">timshaffer</a></span>
+															<span class="qa-q-item-who-points">
+																<span class="qa-q-item-who-points-pad">(</span><span class="qa-q-item-who-points-data">440</span><span class="qa-q-item-who-points-pad"> points)</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<div class="qa-q-item-tags">
+													<ul class="qa-q-item-tag-list">
+														<li class="qa-q-item-tag-item"><a href="./tag/python" class="qa-tag-link">python</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="qa-q-item-clear">
+											</div>
+										</div> <!-- END qa-q-list-item -->
+										
+									</div> <!-- END qa-q-list -->
+									
+									<div class="qa-q-list-form">
+										<input type="hidden" name="code" value="0-1401439347-08b70283dee87bdfd4c52d61ee112659daaff2da">
+									</div>
+								</form>
+							</div>
+							<div class="qa-suggest-next">
+								To see more, click for the <a href="./questions">full list of questions</a> or <a href="./tags">popular tags</a>.
+							</div>
+						</div> <!-- END qa-main -->
+						
+					</div> <!-- END main-wrapper -->
+				</div> <!-- END main-shadow -->
+			</div> <!-- END body-wrapper -->
+			
+      <div class="container">                                                      
+      <hr>                                                                       
+      </div> <!-- /container -->                                                   
+      <footer>                                                                     
+      <p class="text-center">                                                      
+      <a href="/discuss/faq/">Frequently Asked Questions</a>                   
+      </p>                                                                         
+      <p class="text-center">Copyright © 2013 LeetCode</p>                         
+      </footer> 
+				<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6849839-6', 'leetcode.com');
+  ga('send', 'pageview');
+</script>
+				<div style="position:absolute; left:-9999px; top:-9999px;">
+					<span id="qa-waiting-template" class="qa-waiting">...</span>
+				</div>
+			</body>
+			<!-- Powered by Question2Answer - http://www.question2answer.org/ -->
+		</html>
+<!--
+It's no big deal, but your HTML could not be indented properly. To fix, please:
+1. Use this->output() to output all HTML.
+2. Balance all paired tags like <td>...</td> or <div>...</div>.
+3. Use a slash at the end of unpaired tags like <img/> or <input/>.
+Thanks!
+-->

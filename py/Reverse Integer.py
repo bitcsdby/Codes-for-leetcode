@@ -1,16 +1,15 @@
 class Solution:
     # @return an integer
     def reverse(self, x):
-        ret = 0;
-        tmp = 0;
-        
+        sign = 0
         if x < 0:
-            x = -x;
-            tmp = 1;
+            sign = 1
+            x = -x
         
+        l = list(str(x))
+        l.reverse()
+        ret = int(''.join(l))
         
-        while x != 0:
-            ret = ret * 10 + x % 10;
-            x = x / 10;
-            
-        return ret if tmp == 0 else -ret;
+        if sign == 1:
+            return -ret
+        return ret
