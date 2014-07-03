@@ -1,50 +1,68 @@
 class Solution {
 public:
-    int atoi(const char *str) {
-        int l = 0;
-        const char * p = str;
-        int sign = 1;
-        bool bsign = false,bspace = false;
-        long long iret = 0;
+    bool isNumber(const char *s) {
+        bool bdot = false,bspace = false,be = false,bsign = false,bnum = false,benum = false;
         
-        while (p != NULL && *p != '\0')
+        const char* p = s;
+        int l = 0;
+        
+        while(p != NULL && *p != '\0')
         {
-            p++;
-            l++;
+            p += 1;
+            l += 1;
         }
         
         int i = 0;
-        
         for(i = 0;i < l;i++)
         {
-            if((str[i] == '+' || str[i] == '-') && bsign == false)
+            if(s[i] == ' ' && bspace == false)
+               continue;
+            else if(s[i] == ' ' && bspace == true)
             {
-                if(str[i] == '-')
-                    sign = -1;
-                    
+                while(i < l && s[i] == ' ')
+                   i += 1;
+                if(i != l)
+                    return false;
+                else
+                {
+                    if(be)  // end with e is not valid
+                        return benum;
+                }
+            }
+            else if((s[i] == '+' || s[i] == '-') && bsign == false)
+            {
+                bsign = true;
+                bspace = true;  //no pre space
+            }
+            else if(s[i] == '.' && bdot == false)
+            {
+                bdot = true;  // only one bdot
+                bsign = true; // sign must before dot
+                bspace = true; //space must before dot
+            }
+            else if(s[i] >= '0' && s[i] <= '9')
+            {
+                if(be)
+                    benum = true;  //num after e
+                bnum = true;
                 bsign = true;
                 bspace = true;
             }
-            else if(str[i] == ' ' && bspace == false)
+            else if(s[i] == 'e' && be == false && bnum == true)
             {
-                continue;
-            }
-            else if(str[i] >= '0' && str[i] <= '9')
-            {
-                iret = iret * 10 + str[i] - '0';
-                bspace = true;
-                bsign = true;
+                be = true;
+                bdot = true;
+                bsign = false;  //e+10 is valid
             }
             else
+            {
+                bnum = false;
                 break;
+            }
+           
         }
-        
-        
-        if(iret*sign > INT_MAX)
-            return INT_MAX;
-        if(iret*sign < INT_MIN)
-            return INT_MIN;
-            
-        return iret*sign;
+        if(be)
+            return benum && bnum;
+        return bnum;
     }
 };
